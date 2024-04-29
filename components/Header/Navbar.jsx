@@ -4,18 +4,24 @@ import { IoClose } from 'react-icons/io5'
 import navLinks from '@/data/navLinks'
 import { motion, AnimatePresence } from 'framer-motion'
 import { parentVariants, childVariants } from '@/animations/common'
+import Link from 'next/link'
+
 import {
   mobileContainer,
   mobileFlexContainer,
   mobileLinkVariants,
 } from '../../animations/mobileNav'
+import { useWeb3Modal, useWeb3ModalAccount } from '@web3modal/ethers/react'
+
 function Navbar() {
+  const { open, close } = useWeb3Modal()
   const [nav, setNav] = useState(false)
   const toggleNav = () => {
     setNav((prev) => {
       return !prev
     })
   }
+
   const styles = {
     btn: 'px-5 rounded-md font-medium border-indigo-600 py-2 bg-indigo-600 hover:bg-indigo-700 hover:border-indigo-700',
     navLink: 'hover:text-indigo-600 duration-200 ease-in-out',
@@ -23,6 +29,12 @@ function Navbar() {
       'hover:text-indigo-600 duration-200 ease-in-out border-b border-white  text-center',
   }
 
+
+  function openAccount() {
+
+    open({ view: 'Networks' })
+  }
+  const { isConnected } = useWeb3ModalAccount()
   return (
     <>
       <nav className='p-4 bg-slate-900'>
@@ -38,22 +50,44 @@ function Navbar() {
             {/* Logo */}
             <motion.h1
               variants={childVariants}
-              className='text-2xl font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400'
+              className='text-2xl font-bold uppercase  '
             >
-              <span className=''>Real Estate</span> Tokenization
+              <Link href='/' className=''>Token Estate</Link>
             </motion.h1>
             {/* Menu Items */}
             <motion.div
               variants={childVariants}
               className='hidden lg:flex space-x-6 text-sm items-center'
             >
-              {navLinks.map((link, idx) => {
+              {/* {navLinks.map((link, idx) => {
                 return (
                   <a key={idx} href='#' className={styles.navLink}>
                     {link}
                   </a>
                 )
-              })}
+              })} */}
+              {/* <motion.button onClick={openAccount }>Account</motion.button> */}
+              <Link href='/about' className={styles.navLink}>
+                About
+              </Link>
+
+              <Link href='/contact' className={styles.navLink}>
+                Contact
+              </Link>
+
+              {isConnected ? (
+                <>
+                  <Link href='/register' className={styles.navLink}>
+                    Register Property
+                  </Link>
+                  <Link href='/discover' className={styles.navLink}>
+                    Discover
+                  </Link>
+                </>
+              ) : ""}
+
+
+
 
               <w3m-button className={styles.btn}>Connect Wallet</w3m-button>
             </motion.div>

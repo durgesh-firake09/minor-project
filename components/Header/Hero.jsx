@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import hero from '@/assets/hero.png'
+import Link from 'next/link'
+
 
 function Hero() {
   const styles = {
@@ -36,7 +37,7 @@ function Hero() {
   return (
     <>
       <section
-        className={`py-36 p-4 md:py-52 relative overflow-hidden text-white ${styles.bgGradient}`}
+        className={`py-20 p-4 md:py-40 relative overflow-hidden text-white ${styles.bgGradient}`}
       >
         {/* Backgound */}
         <motion.div
@@ -45,12 +46,13 @@ function Hero() {
           animate='show'
           className='absolute  inset-0 bg-no-repeat bg-bottom -z-10'
         >
-          <motion.img
-            variants={imgVariants}
-            src={hero}
+          <motion.div><img
+
+            src="/assets/hero.png"
             alt=''
             className='object-cover w-full h-full'
-          />
+          ></img>
+          </motion.div>
         </motion.div>
         {/* Content */}
         <div className='container max-w-6xl mx-auto'>
@@ -65,17 +67,17 @@ function Hero() {
               variants={childVariants}
               className='text-5xl font-bold max-w-lg leading-normal'
             >
-              Discover Exclusive Digital collectibles
-            </motion.h1>
+              Revolutionizing Real Estate Investment            </motion.h1>
             {/* Paragraph */}
             <motion.p variants={childVariants} className='max-w-lg leading-6'>
-              We are a huge marketplace dedicated to connecting great artists of
-              all Techwind with their fans and unique token collectors!
+              Welcome to TokenEstate, where real estate investment meets blockchain innovation. Unlock new possibilities with fractional ownership of premium properties. Join us as we democratize real estate investment for all.
             </motion.p>
             {/* CTA */}
-            <motion.button variants={childVariants} className={styles.btn}>
-              Discover
-            </motion.button>
+            <Link href="/discover">
+              <motion.button variants={childVariants} className={styles.btn}>
+                Discover
+              </motion.button>
+            </Link>
           </motion.div>
         </div>
       </section>
