@@ -1,3 +1,4 @@
+'use client'
 
 import Footer from "@/components/Footer/Footer"
 import RegisterProperty from "@/components/Forms/RegisterProperty"
@@ -24,5 +25,6 @@ export default function Home() {
             <Footer />
         </>
 
-    )
+    ) 
+    
 }

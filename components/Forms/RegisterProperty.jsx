@@ -1,3 +1,4 @@
+'use client'
 
 import { useWeb3ModalAccount, useWeb3ModalProvider } from '@web3modal/ethers/react';
 import { BrowserProvider, ethers } from 'ethers';
@@ -7,7 +8,7 @@ const pinataSDK = require("@pinata/sdk")
 
 
 export default function RegisterProperty() {
-    const pinata = new pinataSDK({ pinataJWTKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiIyYTFhMTMzYS1kNDI5LTQzNjAtOWIxZS1iYjMwNDY4MTQzNGIiLCJlbWFpbCI6ImZpcmFrZS5kdXJnZXNoODc2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImlkIjoiRlJBMSIsImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxfSx7ImlkIjoiTllDMSIsImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxfV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2UsInN0YXR1cyI6IkFDVElWRSJ9LCJhdXRoZW50aWNhdGlvblR5cGUiOiJzY29wZWRLZXkiLCJzY29wZWRLZXlLZXkiOiI4YTdhNDM4MDNiNDhmMmFkMjU2ZSIsInNjb3BlZEtleVNlY3JldCI6ImY4MmVkNDhlNDVlMThhZDAyOGI1YTc0ZWYxODY2NGQ4MGU1ZDg5MGNlNWMzZmFlZjNmMmIyN2U2OGU1OGM4OTgiLCJpYXQiOjE3MTQzMDM0NDd9.tF83uI6v1JOWs4ro9dzi-YFMnQfnMkrVEniAt7yw1jA" })
+    const pinata = new pinataSDK({ pinataJWTKey: process.env.NEXT_PUBLIC_PINATA_JWT_KEY })
 
     const { address } = useWeb3ModalAccount()
     const [balance, setBalance] = useState("")
@@ -39,10 +40,10 @@ export default function RegisterProperty() {
     // console.log(balance)
     return (
         <>
-            <div className='flex flex-col space-y-4 container w-3/4 m-auto'>
+            <div className='flex flex-col space-y-4 my-10 container w-3/4 m-auto'>
                 <h3 className='text-2xl font-semibold text-slate-200'>Register Property</h3>
                 <div className='flex flex-col space-y-2'>
-                    <p className='text-md text-slate-300'>
+                    <p className='text-md text-slate-300 pt-3'>
                         Name <span className='text-rose-500'>*</span>
                     </p>
                     {/* <div className=''> */}
@@ -52,7 +53,7 @@ export default function RegisterProperty() {
                         className='p-2 bg-slate-700 rounded-sm text-slate-100 flex space-x-1 items-center'
                         placeholder='Enter Your Name'
                     />
-                    <p className='text-md text-slate-300'>
+                    <p className='text-md text-slate-300 pt-3'>
                         Wallet Address (Owner) <span className='text-rose-500'>*</span>
                     </p>
                     <div
@@ -60,7 +61,7 @@ export default function RegisterProperty() {
 
 
                     >{address + " - " + balance + " ETH"}</div>
-                    <p className='text-md text-slate-300'>
+                    <p className='text-md text-slate-300 pt-3'>
                         Image (SVG) <span className='text-rose-500'>*</span>
                     </p>
                     <input
@@ -68,7 +69,7 @@ export default function RegisterProperty() {
                         className='p-2 bg-slate-700 rounded-sm text-slate-100 flex space-x-1 items-center'
 
                     />
-                    <p className='text-md text-slate-300'>
+                    <p className='text-md text-slate-300 pt-3'>
                         Dimentions (Sq. ft.)) <span className='text-rose-500'>*</span>
                     </p>
                     <input
@@ -76,7 +77,7 @@ export default function RegisterProperty() {
                         className='p-2 bg-slate-700 rounded-sm text-slate-100 flex space-x-1 items-center'
                         placeholder='Enter Dimensions (sq. ft.)'
                     />
-                    <p className='text-md text-slate-300'>
+                    <p className='text-md text-slate-300 pt-3'>
                         Address <span className='text-rose-500'>*</span>
                     </p>
                     <textarea
@@ -85,7 +86,7 @@ export default function RegisterProperty() {
                         placeholder='Enter Physical Address of the Property'
                     />
 
-                    <button className='text-white font-semibold bg-indigo-600 p-2 rounded-md'>
+                    <button className='text-white font-semibold w-[15%] bg-indigo-600 p-2 rounded-md' style={{ marginTop: "20px" }}>
                         Register
                     </button>
                 </div>

@@ -1,3 +1,4 @@
+'use client'
 import { useWeb3ModalAccount, useWeb3ModalProvider } from "@web3modal/ethers/react";
 import { BrowserProvider, Contract } from "ethers";
 import { motion } from "framer-motion";

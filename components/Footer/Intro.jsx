@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import {
   AiOutlineRadarChart,
@@ -16,16 +17,15 @@ function Intro() {
   return (
     <>
       {/* Flex Container */}
-      <div className='md:col-span-3 lg:col-span-1 flex flex-col space-y-4 justify-start text-white'>
+      <div className='md:col-span-3 lg:col-span-2 flex flex-col space-y-4 justify-start text-white'>
         {/* Logo */}
         <div className='flex items-center space-x-2'>
           <AiOutlineRadarChart size={35} />
-          <h3 className='text-lg font-bold uppercase'>NFT Marketplace.</h3>
+          <h3 className='text-lg font-bold uppercase'>Token Estate</h3>
         </div>
         {/* Intro */}
         <p className='text-slate-300 '>
-          Start working with Tailwind CSS that can provide everything you need
-          to generate awareness, drive traffic, connect.
+          Revolutionizing Real Estate Investment
         </p>
         {/* Social Icons */}
         <div className='flex space-x-2'>

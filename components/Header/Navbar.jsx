@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { IoClose } from 'react-icons/io5'
@@ -67,13 +68,13 @@ function Navbar() {
                 )
               })} */}
               {/* <motion.button onClick={openAccount }>Account</motion.button> */}
-              <Link href='/about' className={styles.navLink}>
+              {/* <Link href='/about' className={styles.navLink}>
                 About
               </Link>
 
               <Link href='/contact' className={styles.navLink}>
                 Contact
-              </Link>
+              </Link> */}
 
               {isConnected ? (
                 <>
@@ -82,6 +83,9 @@ function Navbar() {
                   </Link>
                   <Link href='/discover' className={styles.navLink}>
                     Discover
+                  </Link>
+                  <Link href='/dashboard' className={styles.navLink}>
+                    Dashboard
                   </Link>
                 </>
               ) : ""}
