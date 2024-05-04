@@ -39,19 +39,19 @@ function Hero() {
   return (
     <>
       <section
-        className={`py-20 p-4 md:py-40 relative overflow-hidden text-white ${styles.bgGradient}`}
+        className={`py-20 p-4 md:py-40 relative overflow-hidden text-white`} style={{background:"#1b2236"}}
       >
         {/* Backgound */}
         <motion.div
           variants={parentVariants}
           initial='hidden'
           animate='show'
-          className='absolute  inset-0 bg-no-repeat bg-bottom -z-10'
+          className='absolute  inset-0 bg-no-repeat bg-bottom'
         >
           <motion.div><img
 
-            src="/assets/hero.png"
-            alt=''
+            src="assets/hero.png"
+            alt='fuck off'
             className='object-cover w-full h-full'
           ></img>
           </motion.div>

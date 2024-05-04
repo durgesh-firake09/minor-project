@@ -38,7 +38,7 @@ function Navbar() {
   const { isConnected } = useWeb3ModalAccount()
   return (
     <>
-      <nav className='p-4 bg-slate-900'>
+      <nav className='p-4' style={{ backgroundColor: "#1b2236" }}>
         <div className='container mx-auto max-w-6xl relative'>
           {/* Flex Container */}
 
@@ -140,6 +140,7 @@ function Navbar() {
           </motion.div>
         </div>
       </nav>
+      <hr style={{ border: "1px solid rgb(62 73 105)" }} />
     </>
   )
 }

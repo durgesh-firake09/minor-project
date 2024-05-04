@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "tokenId": 1,
+      "name": "Durgesh Firake",
+      "email": "firake.durgesh@gmail.com",
+      "state": "Maharashtra",
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "status": "Pending",
+      "tokenUri": "ipfs://QmdcEeoJtiyD6YokAmaDE5ThEwBZsDJL31QeyejLVXzBXy",
+      "price": "20"
+    },
+    {
+      "tokenId": 1,
+      "name": "Durgesh Firake",
+      "email": "firake.durgesh@gmail.com",
+      "state": "Maharashtra",
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "status": "Pending",
+      "tokenUri": "ipfs://QmdcEeoJtiyD6YokAmaDE5ThEwBZsDJL31QeyejLVXzBXy",
+      "price": "20"
+    }
+  ]
+}
