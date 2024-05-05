@@ -19,7 +19,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <Spinner />
+            {/* <Spinner /> */}
             {/* <h1>Decentralized App</h1> */}
             <Hero></Hero>
             {/* <ConnectButton /> */}
