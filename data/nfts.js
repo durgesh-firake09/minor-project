@@ -1,4 +1,4 @@
-let nft1 = '/assets/nfts/nft1.jpg'
+let nft1 = '/assets/home.jpg'
 let nft2 = '/assets/nfts/nft2.jpg'
 let nft3 = '/assets/nfts/nft3.jpg'
 let nft4 = '/assets/nfts/nft4.jpg'

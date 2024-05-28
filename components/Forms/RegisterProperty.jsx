@@ -76,8 +76,9 @@ export default function RegisterProperty() {
             email: email,
             wallet: address,
             state: uAddress,
-            price: 10,
+            price: price,
             tokenURI: "ipfs://" + res.IpfsHash,
+            description:description
 
         }])
         console.log(data)

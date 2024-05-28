@@ -24,14 +24,12 @@ function HotProducts() {
                 variants={childVariants}
                 className='text-2xl md:text-3xl font-medium'
               >
-                Explore Hot Products
+                Explore New Listings
               </motion.h1>
               <motion.p
                 variants={childVariants}
                 className='text-slate-400 max-w-lg text-center'
               >
-                We are a huge marketplace dedicated to connecting great artists
-                of all Techwind with their fans and unique token collectors!
               </motion.p>
             </motion.div>
             {/* Collection of NFTs */}
