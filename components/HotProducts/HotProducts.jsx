@@ -30,6 +30,7 @@ function HotProducts() {
                 variants={childVariants}
                 className='text-slate-400 max-w-lg text-center'
               >
+                
               </motion.p>
             </motion.div>
             {/* Collection of NFTs */}
